@@ -12,14 +12,14 @@
         "method": "POST",
         "path": "/graphql",
         "headers": {
-          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjM3NjM1OTk4LCJleHAiOjE2Mzc4MDg3OTh9.oDPW0raH0iF-y5UGGb1_OkcD8AW_iLUV3EagvF0jzfQ",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjg4MzEwMjkxLCJleHAiOjE2ODg0ODMwOTF9.h8Z6ivfD_S7IxA_JEjS2OVmOwGo6BcVCS5OUQ09guQU",
           "Content-Type": "application/json"
         },
         "body": {
           "operationName": "users",
           "variables": {
           },
-          "query": "query users($where: UserWhereInput, $orderBy: UserOrderByInput, $skip: Float, $take: Float) {\n  items: users(where: $where, orderBy: $orderBy, skip: $skip, take: $take) {\n    createdAt\n    firstName\n    id\n    lastName\n    roles\n    updatedAt\n    username\n    __typename\n  }\n  total: _usersMeta(where: $where, orderBy: $orderBy, skip: $skip, take: $take) {\n    count\n    __typename\n  }\n}\n"
+          "query": "query users($orderBy: UserOrderByInput, $skip: Float, $take: Float, $where: UserWhereInput) {\n  items: users(orderBy: $orderBy, skip: $skip, take: $take, where: $where) {\n    createdAt\n    firstName\n    id\n    lastName\n    roles\n    updatedAt\n    username\n    __typename\n  }\n  total: _usersMeta(where: $where) {\n    count\n    __typename\n  }\n}\n"
         }
       },
       "response": {
@@ -31,27 +31,25 @@
           "data": {
             "items": [
               {
-                "createdAt": "2021-11-21T19:57:22.221Z",
-                "firstName": "Ernesto",
-                "id": "ckw9nw4h90000ouup31sak6l3",
-                "lastName": "Barbosa",
-                "roles": [
-                  "user"
-                ],
-                "updatedAt": "2021-11-23T01:09:22.828Z",
-                "username": "admin",
-                "__typename": "User"
+                "createdAt":"2023-06-29T23:25:12.991Z",
+                "firstName":"Admin",
+                "id":"cljhrwqzj0000w3gkrxpts271",
+                "lastName":"User",
+                "roles":["user"],
+                "updatedAt":"2023-06-29T23:25:13.077Z",
+                "username":"admin",
+                "__typename":"User"
               },
               {
-                "createdAt": "2021-11-21T19:57:22.221Z",
-                "firstName": "Ernesto",
-                "id": "ckw9nw4h90000ouup31sak6l3",
-                "lastName": "Barbosa",
+                "createdAt": "2023-07-02T15:05:36.806Z",
+                "firstName": "Giovanna",
+                "id": "cljlkdt7p0000w32onifkxt9c",
+                "lastName": "Paolinelli",
                 "roles": [
                   "user"
                 ],
-                "updatedAt": "2021-11-23T01:09:22.828Z",
-                "username": "admin",
+                "updatedAt": "2023-07-02T15:05:36.806Z",
+                "username": "giovanna",
                 "__typename": "User"
               }
             ],
